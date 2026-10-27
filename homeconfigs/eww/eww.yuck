@@ -1,0 +1,9 @@
+;;-------------------------;;
+;;-- Include all widgets --;;
+;;-------------------------;;
+
+;; Shutdown, restart, and lock menu
+(include "./powermenu/powermenu.yuck")
+
+;; Volume / brightness change pop-up window
+(include "./infoisland/infoisland.yuck")

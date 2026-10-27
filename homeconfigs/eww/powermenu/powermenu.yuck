@@ -1,0 +1,29 @@
+(defwidget powermenu-wg []
+	(box :class "powermenu-main" :orientation "horizontal" :space-evenly true :valign "center" :valign "fill"
+		(button :class "button"
+			:onclick "./powermenu/scripts/off.sh"
+			(label :text "󰤂")
+		)
+		(button :class "button"
+			:onclick "./powermenu/scripts/reboot.sh"
+			(label :text "󰑐")
+		)
+		(button :class "button"
+			:onclick "./powermenu/scripts/lock.sh"
+			(label :text "")
+		)
+	)
+)
+(defwindow powermenu
+	:monitor 0
+	:geometry (geometry
+		:x "0px" :y "0px"
+		:height "258px"
+		:width "758px"
+		:anchor "center center"
+	)
+	:stacking "overlay"
+	:exclusive false
+	:focusable true
+	(powermenu-wg)
+)

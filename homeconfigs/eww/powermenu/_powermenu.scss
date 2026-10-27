@@ -1,0 +1,27 @@
+@import '../colors';
+
+.powermenu {
+    background: $bg-color; 
+    border: $bord;
+    border-radius: $bord-rad;
+}
+.powermenu-main {
+    background: none;
+}
+.powermenu-main .button {
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    font-family: JetBrainsMono Nerd Font Mono;
+    font-size: 150px;
+    text-shadow: none;
+    color: $font-color;
+    background: none;
+    outline: none;
+}
+.powermenu-main .button:hover {
+    box-shadow: none;
+    font-weight: bold;
+    text-shadow: none;
+    background: $main-color;
+}

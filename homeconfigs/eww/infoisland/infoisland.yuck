@@ -1,0 +1,38 @@
+(defvar infoisland-type "")
+(defpoll infoisland-sound :interval "40ms"
+	:initial "0"
+	"wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2 * 100}'"
+)
+(defpoll infoisland-brightness :interval "40ms"
+	:initial "0"
+	"brightnessctl -m | awk -F, '{print int($4)}'"
+)
+(defwidget infoisland-wg []
+	(box :class "infoisland-main" :orientation "vertical"
+		(label :class "icon" :height 40 :yalign 0.9
+			:text {
+				infoisland-type == "sound" ? "󰕾" :
+				infoisland-type == "backlight" ? "" : ""
+			}
+		)
+		(label :class "label" :height 40 :yalign -1.0
+			:text {
+				infoisland-type == "sound" ? infoisland-sound :
+				infoisland-type == "backlight" ? infoisland-brightness : ""
+			}
+		)
+	)
+)
+(defwindow infoisland
+	:monitor 0
+	:geometry (geometry
+		:x "0px" :y "20px"
+		:height "88px"
+		:width "88px"
+		:anchor "center bottom"
+	)
+	:stacking "overlay"
+	:exclusive false
+	:focusable false
+	(infoisland-wg)
+)
