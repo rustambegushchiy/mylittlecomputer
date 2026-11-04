@@ -1,0 +1,64 @@
+@import '../colors';
+
+.coolboard {
+    border: $bord;
+    border-radius: $bord-rad;
+    background: $bg-color; 
+}
+.coolboard-main .top-menu {
+    font-family: Poppins;
+    font-size: 18px;
+    color: $font-color;
+}
+.coolboard-main .top-menu button {
+    border: none;
+    border-radius: 0px;
+    font-family: JetBrainsMono Nerd Font Mono;
+    font-size: 30px;
+    color: $font-color;
+    background: none;
+    text-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+.coolboard-main .top-menu button:hover {
+    background: $main-color;
+}
+.coolboard-main .scroll box button {
+    border: none;
+    border-radius: 0px;
+    font-family: Poppins;
+    font-size: 18px;
+    color: $font-color;
+    background: none;
+    text-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+.coolboard-main .scroll box button:hover {
+    background: $main-color;
+}
+scrollbar {
+    min-width: 0;
+    min-height: 0;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    slider {
+        min-width: 0;
+        min-height: 0;
+        opacity: 0;
+    }
+    overshoot {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+}
+scrolledwindow {
+    overshoot {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+}

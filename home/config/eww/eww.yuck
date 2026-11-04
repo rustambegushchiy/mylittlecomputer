@@ -7,3 +7,5 @@
 
 ;; Volume / brightness change pop-up window
 (include "./infoisland/infoisland.yuck")
+
+(include "./coolboard/coolboard.yuck")

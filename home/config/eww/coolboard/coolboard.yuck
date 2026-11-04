@@ -1,0 +1,29 @@
+(defvar coolboard-h "")
+
+(defwidget coolboard-wg []
+	(box :class "coolboard-main" :orientation "vertical" :space-evenly false
+		(box :class "top-menu" :orientation "horizontal" :space-evenly false :height 50
+			(label :text "Coolboard" :hexpand true)
+			(button :onclick "cliphist wipe; ./coolboard/scripts/histgen.sh; eww update 'coolboard-h=$(cat ./coolboard/scripts/list.txt)'
+" :width 50
+				(label :text "")
+			)
+		)
+		(scroll :class "scroll" :vscroll true :vexpand true :hscroll false :orentation "vertical"
+			(literal :content coolboard-h)
+		)
+	)
+)
+(defwindow coolboard
+	:monitor 0
+	:geometry (geometry
+		:x "0px" :y "0px"
+		:height "608px"
+		:width "408px"
+		:anchor "center center"
+	)
+	:stacking "fg"
+	:exclusive false
+	:focusable true
+	(coolboard-wg)
+)
