@@ -1,0 +1,16 @@
+#---------------------#
+#--- String format ---#
+#---------------------#
+
+add_newline = false
+format = """[ ](bg:#f7630c)$username[ ](bg:#f7630c)[](fg:#f7630c bg:#5c1300)$directory[](fg:#5c1300) """
+
+[username]
+format = '[$user]($style)'
+style_user = "bg:#f7630c fg:white"
+style_root = "bg:#f7630c fg:white"
+show_always = true
+
+[directory]
+format = '[$path]($style)'
+style = "bg:#5c1300 fg:white"
