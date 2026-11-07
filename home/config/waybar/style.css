@@ -1,0 +1,154 @@
+/*---------------------*/
+/*-- Font and colors --*/
+/*---------------------*/
+
+@define-color main-color #f7630c;
+@define-color bg-color rgba(0, 0, 0, 0.5);
+@define-color font-color #ffffff;
+
+* {
+	font-family: Poppins;
+	font-size: 16px;
+}
+window#waybar {
+	background: rgba(0, 0, 0, 0);
+}
+
+tooltip {
+	color: @font-color;
+	background: @bg-color;
+	border: 4px solid @main-color; 
+	border-radius: 0px;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+/*----------*/
+/*-- Left --*/
+/*----------*/
+
+#workspaces {
+	background: @bg-color;
+	border: 4px solid @main-color; 
+	border-radius: 0px;
+}
+#workspaces button {
+	min-width: 30px;
+	border: 0px;
+}
+#workspaces button.active {
+	font-weight: bold;
+	color: @font-color;
+	background: @main-color;
+	border: 0px;
+	border-radius: 0px;
+}
+#workspaces button:not(.active) {
+	color: @font-color;
+	border: 0px;
+}
+#workspaces button:hover {
+	color: @font-color;
+	background: @main-color;
+	border: 0px;
+	border-radius: 0px;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	transition: 0;	
+}
+
+/*------------*/
+/*-- Middle --*/
+/*------------*/
+
+#clock {
+	color: @font-color;
+	background: @bg-color;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 4px solid @main-color; 
+	border-radius: 0px;
+}
+#clock.date {
+	margin-left: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 4px solid @main-color; 
+}
+
+/*-----------*/
+/*-- Right --*/
+/*-----------*/
+
+#tray widget {
+	color: white;
+	background: @bg-color;
+	border: 4px solid @main-color; 
+}
+#tray widget:hover {
+	background: @main-color;
+}
+#tray widget>image {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+#tray menu {
+	color: white;
+	background: @bg-color;
+	border: 4px solid @main-color; 
+	border-radius: 0px;
+}
+#tray menu menuitem:hover {
+	color: white;
+	font-weight: bold;
+	background: @main-color;
+}
+#language {
+	color: @font-color;
+	background: @bg-color;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 4px;
+	border: 4px solid @main-color; 
+	border-radius: 0px;
+}
+#backlight {
+	color: @font-color;
+	background: @bg-color;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 4px;
+	border: 4px solid @main-color; 
+	border-radius: 0px;
+}
+#wireplumber {
+	color: @font-color;
+	background: @bg-color;
+	padding-left: 5px;
+	padding-right: 9px;
+	margin-left: 4px;
+	border: 4px solid @main-color; 
+	border-radius: 0px;
+}
+#battery {
+	color: @font-color;
+	background: @bg-color;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 4px;
+	border: 4px solid @main-color; 
+	border-radius: 0px;
+}
+#custom-power {
+	color: @font-color;
+	background: @bg-color;
+	padding-left: 9px;
+	padding-right: 13px;
+	margin-left: 4px;
+	border: 4px solid @main-color; 
+	border-radius: 0px;
+	font-size: 17px;
+}
+#custom-power:hover {
+	background: @main-color;
+}

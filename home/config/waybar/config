@@ -1,0 +1,67 @@
+{
+	"layer": "bottom",
+	"position": "top",
+	"height": 40,
+	"margin": 4,
+	"reload_style_on_change": true,
+	"modules-left": ["hyprland/workspaces"],
+	"modules-center": ["clock#time", "clock#date"],
+	"modules-right": ["tray", "hyprland/language", "backlight", "wireplumber", "battery", "custom/power"],
+	"hyprland/workspaces": {
+		"format": "{name}",
+		"on-click": "activate"
+	},
+	"clock#time": {
+		"format": "{:%H:%M}",
+		"tooltip": false
+	},
+	"clock#date": {
+		"format": "{:%d.%m %Y}",
+		"tooltip": false
+	},
+	"tray": {
+		"icon-size": 16, 
+		"spacing": 4,
+		"show-passive-items": true,
+		"tooltip": false
+	},
+	"hyprland/language": {
+		"format": "󰌌  {}",
+		"format-en": "EN",
+		"format-ru": "RU",
+		"keyboard-name": "at-translated-set-2-keyboard",
+		"tooltip": false
+	},
+	"backlight": {
+		"device": "eDP-1",
+		"format": " {percent}%",
+		"on-scroll-up": "",
+		"on-scroll-down": "",
+		"tooltip": false
+	},
+	"wireplumber": {
+		"format": "{icon} {volume}%",
+		"format-muted": "󰖁",
+		"format-icons": ["󰕿", "󰖀", "󰕾"],
+		"on-scroll-up": "",
+		"on-scroll-down": "",
+		"tooltip": false
+
+	},
+	"battery": {
+		"bat": "BAT1",
+		"interval": 60,
+		"states": { "warning": 20,
+					"critical": 10 },
+		"format": "{icon} {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
+		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+		"max-length": 25,
+		"tooltip": false
+	},
+	"custom/power": {
+		"format": "",
+		"on-click": "~/.config/eww/powermenu/scripts/openwidget.sh",
+		"tooltip": false
+	}
+}

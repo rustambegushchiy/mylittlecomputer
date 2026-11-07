@@ -19,9 +19,12 @@ for ((i = 1; i <= $(cliphist list | wc -l); i++)); do
 	echo -n "$(cliphist -preview-width 25 list \
 		| awk "NR == ${i}" \
 		| cut -f2- \
-		| awk '{ gsub(/\047/, "\\\\'\''"); \
-				 gsub(/"/, "\\\"");
-		print }')" \
+		| awk '{ gsub(/\\/, "\\\\\\\\\\\\"); \
+				 gsub(/"/, "\\\""); \
+				 gsub(/\//, "/"); \
+				 gsub(/\047/, "\\\\\\'\''"); \
+				 gsub(/\${/, "\\${"); \
+				 print }')" \
 		>> $output
 	echo "')" >> $output
 	echo "    )" >> $output
