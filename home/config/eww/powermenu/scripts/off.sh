@@ -6,4 +6,4 @@
 
 hyprctl dispatch 'hl.dsp.submap("reset")'
 eww close powermenu
-hyprshutdown -p poweroff
+hyprshutdown -p shutdown
